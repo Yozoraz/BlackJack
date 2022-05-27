@@ -7,7 +7,7 @@ random.shuffle(koloda)
 class Player:
     score = 0
     current = 0
-    choice = input(' start y/n?\n')
+    choice = input(' Сыграем в 21 ? y/n?\n')
 
 
 player1 = Player()
@@ -23,6 +23,12 @@ def Game():
                 print('Вам попалась карта %d\n' % player1.current)
                 player1.score += player1.current
                 print('У вас %d очков\n' % player1.score)
+                if player1.score > 21:
+                    print('Перебор\n')
+                    break
+                elif player1.score == 21:
+                    print('21\n')
+                    break
             elif player1.choice == 'n':
                 print('У вас %d очков\n' % player1.score)
                 break
@@ -33,6 +39,12 @@ def Game():
                 print('Вам попалась карта %d\n' % player2.current)
                 player2.score += player2.current
                 print('У вас %d очков\n' % player2.score)
+                if player2.score > 21:
+                    print('Перебор\n')
+                    break
+                elif player2.score == 21:
+                    print('21\n')
+                    break
             elif player2.choice == 'n':
                 print('У вас %d очков\n' % player2.score)
                 break
