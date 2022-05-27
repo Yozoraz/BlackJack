@@ -93,4 +93,4 @@ def Winner(score, score2):
 
 print('У первого игрока %d очков\n'%player1.score,'У второго игрока %d очков\n' %player2.score)
 c = Winner(a,b)
-
+input('До новых встреч\n')
